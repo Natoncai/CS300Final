@@ -1,3 +1,13 @@
+<style>
+.myDiv {
+  background-color: #ff7979;
+}
+.yourDiv {
+  background-color: rgb(128, 151, 255);
+  text-align:right;
+}
+</style>
+
 <body>
   <form>
     <input type="text" id="m" />
@@ -24,11 +34,11 @@
 
   //receive data from server.
   socket.on('send data',(data)=>{
-      ID = data.id; //ID will be used later
+      ID = data.id; 
       console.log(" my ID:" + ID);
   })
   $("#m").focus();
-  //when form is submitted, capture the input value and then send it to server
+
   document
     .getElementsByTagName("form")[0]
     .addEventListener("submit", function (event) {
@@ -84,7 +94,7 @@
     li.appendChild(div);
 
     document.getElementById("messages").appendChild(li);
-    //scroll to the bottom
+
     window.scrollTo(0, document.body.scrollHeight);
   }
 </script>
